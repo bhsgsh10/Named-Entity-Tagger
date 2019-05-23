@@ -26,9 +26,11 @@ Tasks:
     `python3 base_hmm_tagger.py`
 
   Run the evaluation of your tagger using the following command:      
-		```
-    python eval_ne_tagger.py ner_dev.key basic_tagged_wordset.txt
-    ```
+	```
+    	python eval_ne_tagger.py ner_dev.key basic_tagged_wordset.txt
+    	```   
+
+Total F1-score for this tagger should be more than 0.3.
 
 3. Compute maximum likelihood parameters for trigrams in the training data: This operation is performed by q_parameters_calculator.py. Run this file using the following command:   
   
@@ -39,7 +41,9 @@ Tasks:
     `python3 viterbi.py`
   
   Run the evaluation of your tagger using the following command: 	   
-    `python eval_ne_tagger.py ner_dev.key viterbi_tagged_wordset.txt`
+    	`python eval_ne_tagger.py ner_dev.key viterbi_tagged_wordset.txt`
+    
+ Total F1-score for this tagger should be more than 0.67. 
   
 5. Enhanced Viterbi: Instead of replacing all infrequent words with _RARE_, group them into different classes such as infrequent words starting with capital letters, or words containing numbers. Choose classes of your own liking and see the changes in accuracy of tagging. Re-run Viterbi algorithm with the new classes of rare words. This task is available on enhanced_viterbi.py. Following classification has been used for rare words:   
   * Numeric: when word contains only numbers
@@ -53,5 +57,6 @@ Tasks:
       `python3 enhanced_viterbi.py`
 
  Run the evaluation of your tagger using the following command:    
-  `python eval_ne_tagger.py ner_dev.key en_viterbi_tagged_wordset.txt`
+  	`python eval_ne_tagger.py ner_dev.key en_viterbi_tagged_wordset.txt`
 
+Total F1-score for this tagger should be more than 0.72.
