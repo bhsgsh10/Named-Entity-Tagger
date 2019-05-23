@@ -47,10 +47,10 @@ Total F1-score for this tagger should be more than 0.3.
   
 5. Enhanced Viterbi: Instead of replacing all infrequent words with _RARE_, group them into different classes such as infrequent words starting with capital letters, or words containing numbers. Choose classes of your own liking and see the changes in accuracy of tagging. Re-run Viterbi algorithm with the new classes of rare words. This task is available on enhanced_viterbi.py. Following classification has been used for rare words:   
   * Numeric: when word contains only numbers
-	* Last caps: when last letter of the word is in caps
-	* All caps: when the entire word is in caps
-	* All small: when the entire word is in small letters
-	* Rare: if the infrequent word does not fall into any of the above categories, then it is classified 	as 'RARE'   
+  * Last caps: when last letter of the word is in caps
+  * All caps: when the entire word is in caps
+  * All small: when the entire word is in small letters
+  * Rare: if the infrequent word does not fall into any of the above categories, then it is classified 	as 'RARE'   
  
  Run this file using the following command:   
   
